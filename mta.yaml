@@ -1,0 +1,26 @@
+_schema-version: "2.1"
+ID: Training_Project
+version: 0.0.1
+modules:
+- name: training_db
+  type: hdb
+  path: db
+  requires:
+  - name: training_hdi_db
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+  - name: remote-grant-service    
+resources:
+- name: training_hdi_db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service-name: TRAINING_PROJECT_HDI
+    config:
+      schema: TRAINING_PROJECT
+      makeUniqueName: false
+  properties:
+    hdi-container-name: ${service-name}
+- name: remote-grant-service
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: remote-grant-service    

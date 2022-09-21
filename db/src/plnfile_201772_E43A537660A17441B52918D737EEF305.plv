@@ -1,0 +1,451 @@
+<?Version 30?>
+<Plan ID="ID_201772_E43A537660A17441B52918D737EEF305_1" xmlns="http://www.sap.com/ndb/planviz" Type="Executed" PlanType="QoExec">
+<SQL><![CDATA[SELECT TOP 1000
+	"PARTNERID",
+	"PARTNERROLE",
+	"EMAILADDRESS",
+	"PHONENUMBER",
+	"FAXNUMBER",
+	"WEBADDRESS",
+	"ADDRESSES_ADDRESSID",
+	"COMPANYNAME",
+	"LEGALFORM",
+	"ADDRESSID",
+	"CITY",
+	"POSTALCODE",
+	"STREET",
+	"BUILDING",
+	"COUNTRY",
+	"REGION",
+	"ADDRESSTYPE",
+	"VALIDITY_STARTDATE",
+	"VALIDITY_ENDDATE",
+	"LATITUDE",
+	"LONGITUDE",
+	"POINT"
+FROM "TRAINING_PROJECT"."BUSINESS_PARTNER_2"]]></SQL>
+<SystemVersion><![CDATA[{"Version":"4.00.000.00.1663064250","CompileType":"rel","USER_NAME":"Capturing USER_NAME is disabled","SCHEMA_NAME":"TRAINING_PROJECT"}]]></SystemVersion>
+<RecompileState><![CDATA[INITIAL_STATE]]></RecompileState>
+<SessionVariables><![CDATA[{"ABAPVARCHARMODE":"FALSE","APPLICATION":"SAP_HANARuntimeTools_HRA","APPLICATIONUSER":"Capturing APPLICATIONUSER is disabled","APPLICATIONVERSION":"4.0.220915-1663247777-8d86895","DRIVERVERSION":"2.12.20","OS_USER":"Capturing OS_USER is disabled","PROTOCOL_VERSION":"4.1 (6, 8)","SPATIAL_OUTPUT_REPRESENTATION":"EWKB","VIRTUAL_TABLE_REPLICA":"TRUE"}]]></SessionVariables>
+<ParameterValues><![CDATA["Capturing Bound Parameter Values is disabled"]]></ParameterValues>
+<ProjectedColsWithDatatype><![CDATA[PARTNERID(INT), PARTNERROLE(NVARCHAR(3)), EMAILADDRESS(NVARCHAR(255)), PHONENUMBER(NVARCHAR(30)), FAXNUMBER(NVARCHAR(30)), WEBADDRESS(NVARCHAR(1024)), ADDRESSES_ADDRESSID(INT), COMPANYNAME(NVARCHAR(80)), LEGALFORM(NVARCHAR(10)), ADDRESSID(INT), CITY(NVARCHAR(40)), POSTALCODE(NVARCHAR(10)), STREET(NVARCHAR(60)), BUILDING(NVARCHAR(10)), COUNTRY(NVARCHAR(3)), REGION(NVARCHAR(4)), ADDRESSTYPE(NVARCHAR(2)), VALIDITY_STARTDATE(DATE), VALIDITY_ENDDATE(DATE), LATITUDE(DOUBLE), LONGITUDE(DOUBLE), POINT(ST_POINT)]]></ProjectedColsWithDatatype>
+<CompileTime>
+	<Start Unit="us">1663661529764535</Start>
+	<End Unit="us">1663661529764573</End>
+</CompileTime>
+<StmtStats><![CDATA[]]></StmtStats>
+<StmtMemStats><![CDATA[[{"Allocated Count":2034,"Allocated Size":1824368,"Allocator Name":"Connection/201772/Statement/866604141327148","Count in Use":2031,"Deallocated Count":1824,"Deallocated Size":1724896,"Depth":3,"Max Allocation Size (estimate)":1048576,"Max Single Allocation Size":1048576,"Size in Use":99248},{"Allocated Count":18,"Allocated Size":59168,"Allocator Name":"Connection/201772/Statement/866604141327148/Pool/RowEngine/QueryExecution/SearchAlloc","Count in Use":18,"Deallocated Count":4,"Deallocated Size":7456,"Depth":4,"Max Allocation Size (estimate)":51712,"Max Single Allocation Size":32768,"Size in Use":51712},{"Allocated Count":2037,"Allocated Size":1718128,"Allocator Name":"Connection/201772/Statement/866604141327148/IMPLICIT","Count in Use":2034,"Deallocated Count":1816,"Deallocated Size":1667984,"Depth":4,"Max Allocation Size (estimate)":1048576,"Max Single Allocation Size":1048576,"Size in Use":49920},{"Allocated Count":5,"Allocated Size":49472,"Allocator Name":"Connection/201772/Statement/866604141327148/Pool/JoinEvaluator","Count in Use":5,"Deallocated Count":5,"Deallocated Size":49472,"Depth":4,"Max Allocation Size (estimate)":32768,"Max Single Allocation Size":32768,"Size in Use":0}]]]></StmtMemStats>
+<CompileSummary><![CDATA[{}]]></CompileSummary>
+	<RootRelation ID="ID_201772_E43A537660A17441B52918D737EEF305_1" TypeName="PROJECT" InternalBufferId="2" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>COLUMN</ExecutionType>
+		<Summary><![CDATA[MD.BusinessPartner.PARTNERID[IDENTITY], MD.BusinessPartner.PARTNERROLE, MD.BusinessPartner.EMAILADDRESS, MD.BusinessPartner.PHONENUMBER, MD.BusinessPartner.FAXNUMBER, MD.BusinessPartner.WEBADDRESS, MD.BusinessPartner.ADDRESSES_ADDRESSID, MD.BusinessPartner.COMPANYNAME, MD.BusinessPartner.LEGALFORM, MD.Addresses.ADDRESSID[IDENTITY], MD.Addresses.CITY, MD.Addresses.POSTALCODE, MD.Addresses.STREET, MD.Addresses.BUILDING, MD.Addresses.COUNTRY, MD.Addresses.REGION, MD.Addresses.ADDRESSTYPE, MD.Addresses.VALIDITY_STARTDATE, MD.Addresses.VALIDITY_ENDDATE, MD.Addresses.LATITUDE, MD.Addresses.LONGITUDE, MD.Addresses.POINT]]></Summary>
+		<Location>13715b57-04fa-4ff5-a396-286f890c3b50:30040</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">1612.3</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>44.9999</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1663661529767113</Start>
+			<End Unit="us">1663661529792039</End>
+			<Exclusive Unit="us">237</Exclusive>
+			<Inclusive Unit="us">24926</Inclusive>
+			<Timestamps>[{"Open": [{"start":1663661529767113,"end":1663661529767138,"thread":2489},{"start":1663661529772312,"end":1663661529772315,"thread":2489}]},{"Fetch": [{"start":1663661529772372,"end":1663661529772388,"thread":2489},{"start":1663661529772398,"end":1663661529772507,"thread":2489},{"start":1663661529791054,"end":1663661529791094,"thread":2489},{"start":1663661529791102,"end":1663661529791134,"thread":2489},{"start":1663661529791135,"end":1663661529791138,"thread":2489}]},{"Close": [{"start":1663661529791157,"end":1663661529791161,"thread":2489},{"start":1663661529792034,"end":1663661529792039,"thread":2489}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">0.213</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"MD.BusinessPartner.PARTNERID[IDENTITY], MD.BusinessPartner.PARTNERROLE, MD.BusinessPartner.EMAILADDRESS, MD.BusinessPartner.PHONENUMBER, MD.BusinessPartner.FAXNUMBER, MD.BusinessPartner.WEBADDRESS, MD.BusinessPartner.ADDRESSES_ADDRESSID, MD.BusinessPartner.COMPANYNAME, MD.BusinessPartner.LEGALFORM, MD.Addresses.ADDRESSID[IDENTITY], MD.Addresses.CITY, MD.Addresses.POSTALCODE, MD.Addresses.STREET, MD.Addresses.BUILDING, MD.Addresses.COUNTRY, MD.Addresses.REGION, MD.Addresses.ADDRESSTYPE, MD.Addresses.VALIDITY_STARTDATE, MD.Addresses.VALIDITY_ENDDATE, MD.Addresses.LATITUDE, MD.Addresses.LONGITUDE, MD.Addresses.POINT","Why not HEX":"[rel: Table MD.BusinessPartner, opId:L:17] There is no available collection search child operator; [rel: Join, opId:L:16] There is no available collection search child operator; [rel: Top, opId:L:15] There is no available collection search child operator; [rel: Table MD.Addresses, opId:L:18] HEX enumeration is not compatible with column storage type K, trex type POINT, eval type K"}]]></Details>
+		<Child ID="ID_201772_E43A537660A17441B52918D737EEF305_2" >
+			<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+			<FetchCallCount>2</FetchCallCount>
+		</Child>
+	</RootRelation>
+	<Relation ID="ID_201772_E43A537660A17441B52918D737EEF305_2" TypeName="TREX_SEARCH" InternalBufferId="1" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>COLUMN</ExecutionType>
+		<Summary><![CDATA[MD.BusinessPartner.PARTNERID, MD.BusinessPartner.PARTNERROLE, MD.BusinessPartner.EMAILADDRESS, MD.BusinessPartner.PHONENUMBER, MD.BusinessPartner.FAXNUMBER, MD.BusinessPartner.WEBADDRESS, MD.BusinessPartner.ADDRESSES_ADDRESSID, MD.BusinessPartner.COMPANYNAME, MD.BusinessPartner.LEGALFORM, MD.Addresses.ADDRESSID, MD.Addresses.CITY, MD.Addresses.POSTALCODE, MD.Addresses.STREET, MD.Addresses.BUILDING, MD.Addresses.COUNTRY, MD.Addresses.REGION, MD.Addresses.ADDRESSTYPE, MD.Addresses.VALIDITY_STARTDATE, MD.Addresses.VALIDITY_ENDDATE, MD.Addresses.LATITUDE, MD.Addresses.LONGITUDE, MD.Addresses.POINT]]></Summary>
+		<Location>13715b57-04fa-4ff5-a396-286f890c3b50:30040</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">799.498</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>44.9999</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1663661529767140</Start>
+			<End Unit="us">1663661529792025</End>
+			<Exclusive Unit="us">903</Exclusive>
+			<Inclusive Unit="us">24885</Inclusive>
+			<Timestamps>[{"Open": [{"start":1663661529767140,"end":1663661529767157,"thread":2489},{"start":1663661529772303,"end":1663661529772311,"thread":2489}]},{"Fetch": [{"start":1663661529772389,"end":1663661529772398,"thread":2489},{"start":1663661529791095,"end":1663661529791101,"thread":2489}]},{"Close": [{"start":1663661529791162,"end":1663661529792025,"thread":2489}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">0.892</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"MD.BusinessPartner.PARTNERID, MD.BusinessPartner.PARTNERROLE, MD.BusinessPartner.EMAILADDRESS, MD.BusinessPartner.PHONENUMBER, MD.BusinessPartner.FAXNUMBER, MD.BusinessPartner.WEBADDRESS, MD.BusinessPartner.ADDRESSES_ADDRESSID, MD.BusinessPartner.COMPANYNAME, MD.BusinessPartner.LEGALFORM, MD.Addresses.ADDRESSID, MD.Addresses.CITY, MD.Addresses.POSTALCODE, MD.Addresses.STREET, MD.Addresses.BUILDING, MD.Addresses.COUNTRY, MD.Addresses.REGION, MD.Addresses.ADDRESSTYPE, MD.Addresses.VALIDITY_STARTDATE, MD.Addresses.VALIDITY_ENDDATE, MD.Addresses.LATITUDE, MD.Addresses.LONGITUDE, MD.Addresses.POINT"}]]></Details>
+		<InnerPlans>
+			<Plan ID="ID_201772_E43A537660A17441B52918D737EEF305_2_0" Type="Estimated" PlanType="Logical">
+				<RootRelation ID="ID_201772_E43A537660A17441B52918D737EEF305_2_0" TypeName="PROJECT">
+					<Name>COLUMN SEARCH</Name>
+					<Summary><![CDATA[MD.BusinessPartner.PARTNERID, MD.BusinessPartner.PARTNERROLE, MD.BusinessPartner.EMAILADDRESS, MD.BusinessPartner.PHONENUMBER, MD.BusinessPartner.FAXNUMBER, MD.BusinessPartner.WEBADDRESS, MD.BusinessPartner.ADDRESSES_ADDRESSID, MD.BusinessPartner.COMPANYNAME, MD.BusinessPartner.LEGALFORM, MD.Addresses.ADDRESSID, MD.Addresses.CITY, MD.Addresses.POSTALCODE, MD.Addresses.STREET, MD.Addresses.BUILDING, MD.Addresses.COUNTRY, MD.Addresses.REGION, MD.Addresses.ADDRESSTYPE, MD.Addresses.VALIDITY_STARTDATE, MD.Addresses.VALIDITY_ENDDATE, MD.Addresses.LATITUDE, MD.Addresses.LONGITUDE, MD.Addresses.POINT]]></Summary>
+					<Location>13715b57-04fa-4ff5-a396-286f890c3b50:30040</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">799.498</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>44.9999</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Projected Cols":"MD.BusinessPartner.PARTNERID, MD.BusinessPartner.PARTNERROLE, MD.BusinessPartner.EMAILADDRESS, MD.BusinessPartner.PHONENUMBER, MD.BusinessPartner.FAXNUMBER, MD.BusinessPartner.WEBADDRESS, MD.BusinessPartner.ADDRESSES_ADDRESSID, MD.BusinessPartner.COMPANYNAME, MD.BusinessPartner.LEGALFORM, MD.Addresses.ADDRESSID, MD.Addresses.CITY, MD.Addresses.POSTALCODE, MD.Addresses.STREET, MD.Addresses.BUILDING, MD.Addresses.COUNTRY, MD.Addresses.REGION, MD.Addresses.ADDRESSTYPE, MD.Addresses.VALIDITY_STARTDATE, MD.Addresses.VALIDITY_ENDDATE, MD.Addresses.LATITUDE, MD.Addresses.LONGITUDE, MD.Addresses.POINT"}]]></Details>
+					<Child ID="ID_201772_E43A537660A17441B52918D737EEF305_2_1">
+					</Child>
+				</RootRelation>
+				<Relation ID="ID_201772_E43A537660A17441B52918D737EEF305_2_1" TypeName="TOP">
+					<Name>LIMIT</Name>
+					<Summary><![CDATA[NUM RECORDS: 1000]]></Summary>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">721.998</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>44.9999</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Num Records":"1000"}]]></Details>
+					<Child ID="ID_201772_E43A537660A17441B52918D737EEF305_2_2">
+					</Child>
+				</Relation>
+				<Relation ID="ID_201772_E43A537660A17441B52918D737EEF305_2_2" TypeName="JOIN">
+					<Name>JOIN</Name>
+					<Summary><![CDATA[JOIN CONDITION: (INNER one-to-many) MD.Addresses.ADDRESSID = MD.BusinessPartner.ADDRESSES.ADDRESSID]]></Summary>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">716.458</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>44.9999</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Join Condition":"(INNER one-to-many) MD.Addresses.ADDRESSID = MD.BusinessPartner.ADDRESSES.ADDRESSID"}]]></Details>
+					<Child ID="ID_201772_E43A537660A17441B52918D737EEF305_2_3">
+					</Child>
+					<Child ID="ID_201772_E43A537660A17441B52918D737EEF305_2_4">
+					</Child>
+				</Relation>
+				<Relation ID="ID_201772_E43A537660A17441B52918D737EEF305_2_4" TypeName="TABLE">
+					<Name>COLUMN TABLE</Name>
+					<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[MD.BusinessPartner]]></ObjectName>
+					<Location>13715b57-04fa-4ff5-a396-286f890c3b50:30040</Location>
+					<EstimatedOutputCardinality>45</EstimatedOutputCardinality>
+				</Relation>
+				<Relation ID="ID_201772_E43A537660A17441B52918D737EEF305_2_3" TypeName="TABLE">
+					<Name>COLUMN TABLE</Name>
+					<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[MD.Addresses]]></ObjectName>
+					<Location>13715b57-04fa-4ff5-a396-286f890c3b50:30040</Location>
+					<EstimatedOutputCardinality>78</EstimatedOutputCardinality>
+				</Relation>
+			</Plan>
+			<Plan ID="je_plan22_13715b57-04fa-4ff5-a396-286f890c3b50_30040" PlanType="JeReduction">
+				<RootRelation ID="je_plan22_13715b57-04fa-4ff5-a396-286f890c3b50_30040_node_0">
+					<Name><![CDATA[H00::TRAINING_PROJECT:MD.Addressesen]]></Name>
+					<HasReqAttrs>True</HasReqAttrs>
+					<IsFirstTrueTable>True</IsFirstTrueTable>
+				</RootRelation>
+				<Relation ID="je_plan22_13715b57-04fa-4ff5-a396-286f890c3b50_30040_node_1">
+					<Name><![CDATA[H00::TRAINING_PROJECT:MD.BusinessPartneren]]></Name>
+					<HasReqAttrs>True</HasReqAttrs>
+					<Child ID="je_plan22_13715b57-04fa-4ff5-a396-286f890c3b50_30040_node_0">
+						<ConnectorId>je_plan22_13715b57-04fa-4ff5-a396-286f890c3b50_30040_edge_0</ConnectorId>
+						<JoinSpecId>0</JoinSpecId>
+					</Child>
+				</Relation>
+			</Plan>
+			<Plan ID="cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040" Type="Executed" PlanType="Column">
+				<RootRelation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_result0" Status="Finished">
+					<Name>Result</Name>
+					<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+					<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop8">
+						<ConnectorName><![CDATA[JEPlanDataResultDocuments]]></ConnectorName>
+						<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+						<Payload Unit="bytes">42764</Payload>
+						<Details><![CDATA[{ "description":"Result table of a query","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.PARTNERID","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.PARTNERROLE","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.EMAILADDRESS","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.PHONENUMBER","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.FAXNUMBER","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.WEBADDRESS","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.ADDRESSES.ADDRESSID","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.COMPANYNAME","data container member":"(column) TRAINING_PROJECT.MD.BusinessPartner.LEGALFORM","data container member":"(column) TRAINING_PROJECT.MD.Addresses.ADDRESSID","data container member":"and 12 more ..." }]]></Details>
+					</Child>
+				</RootRelation>
+				<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040" Status="Finished" Physical="False">
+					<Name><![CDATA[Column Search]]></Name>
+					<ExecutionType>Column Search</ExecutionType>
+					<Summary><![CDATA[6 nodes]]></Summary>
+					<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+					<ObjectName><![CDATA[MD, Temporary Table(s)]]></ObjectName>
+					<ExecutionTime>
+						<Exclusive Unit="ms">0.951</Exclusive>
+						<Inclusive Unit="ms">1.193</Inclusive>
+						<Timestamps>[{"Pop":[{"start":1663661529770085,"end":1663661529770211}]},{"Pop":[{"start":1663661529770234,"end":1663661529770457}]},{"Pop":[{"start":1663661529770483,"end":1663661529770508}]},{"Pop":[{"start":1663661529770525,"end":1663661529770756}]},{"Pop":[{"start":1663661529770847,"end":1663661529770970}]},{"Pop":[{"start":1663661529771055,"end":1663661529771278}]}]</Timestamps>
+					</ExecutionTime>
+					<KernelCPUTime Unit="ms">0</KernelCPUTime>
+					<UserCPUTime Unit="ms">1.22</UserCPUTime>
+					<Details><![CDATA[{"nodes":"6","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.ADDRESSTYPE","table/column processed 003":"MD.Addresses.BUILDING","table/column processed 004":"MD.Addresses.CITY","table/column processed 005":"MD.Addresses.COUNTRY","table/column processed 006":"MD.Addresses.LATITUDE","table/column processed 007":"MD.Addresses.LONGITUDE","table/column processed 008":"MD.Addresses.POINT","table/column processed 009":"MD.Addresses.POSTALCODE","table/column processed 010":"MD.Addresses.REGION","table/column processed 011":"MD.Addresses.STREET","table/column processed 012":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 013":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 014":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 015":"MD.BusinessPartner.COMPANYNAME","table/column processed 016":"MD.BusinessPartner.EMAILADDRESS","table/column processed 017":"MD.BusinessPartner.FAXNUMBER","table/column processed 018":"MD.BusinessPartner.LEGALFORM","table/column processed 019":"MD.BusinessPartner.PARTNERID","table/column processed 020":"MD.BusinessPartner.PARTNERROLE","table/column processed 021":"MD.BusinessPartner.PHONENUMBER","table/column processed 022":"MD.BusinessPartner.WEBADDRESS","table/column processed 023":"Temporary Table","schema":"TRAINING_PROJECT"}]]></Details>
+					<InnerPlans>
+						<Plan ID="subplan_X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040" PlanType="Column">
+							<Relation ID="cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pattern1" Status="Finished" Physical="False">
+								<Name><![CDATA[reduction phase]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[(2 nodes) reduce data prior to join]]></Summary>
+								<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+								<ObjectName><![CDATA[MD]]></ObjectName>
+								<ExecutionTime>
+									<Exclusive Unit="ms">0.349</Exclusive>
+									<Inclusive Unit="ms">0.372</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1663661529770085,"end":1663661529770211}]},{"Pop":[{"start":1663661529770234,"end":1663661529770457}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">0.416</UserCPUTime>
+								<Details><![CDATA[{"nodes":"2","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.BusinessPartner.ADDRESSES.ADDRESSID","schema":"TRAINING_PROJECT","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.BusinessPartner.ADDRESSES.ADDRESSID","schema":"TRAINING_PROJECT"}]]></Details>
+								<InnerPlans>
+									<Plan ID="subplan_cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pattern1" PlanType="Column">
+										<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop2" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEStep2]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Semijoin2 (second join partner)  + Filter]]></Summary>
+											<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+											<ObjectName><![CDATA[MD.Addresses.ADDRESSID]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.223</Exclusive>
+												<Inclusive Unit="ms">0.372</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1663661529770234,"end":1663661529770457}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.242</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"MD.Addresses.ADDRESSID","PerformanceTrace":"{\"details\":[{\"1_timestamp\":\"2022-09-20 08:12:09.770445\",\"2_key\":\"table name\",\"3_value\":\"MD.Addresses\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"},{\"1_timestamp\":\"2022-09-20 08:12:09.770451\",\"2_key\":\"<large detail>\",\"3_value\":\"<executePop(<jeGetApproxCounts(attrs=1,)=0.01><jeReadValueIds()=0.01><fillTT(numTT=1,)=0.08><translate_mark_li_vec(size=78,)=0.00><markTuplesNotInTL(num=78,numMarked=33,)=0.00><removeTuples(<eraseRows(NumCols=2,)=0.00>in=78,partitions=0,out=45,)=0.00><updateMinMax(num=45,min=0,max=44,)=0.00><simpleJoin(in1=45,in2=45,out=45,)=0.00>)=0.20>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"}]}","FunctionProfiler":"[{\"Start Time\":\"2022-09-20 08:12:09.770\",\"Steps\":[{\"Name\":\"void JoinEvaluator::JoinEvaluator::getTranslationTable(const TrexBase::IndexName&, const TRexUtils::HostAndPort&, const string&, TRexCommonObjects::AttributeId, const TrexBase::IndexName&, const TRexUtils::HostAndPort&, const string&, TRexCommonObjects::AttributeId, bool, ltt::shared_ptr<JoinEvaluator::TranslationTable>&)\",\"Total\":0.033}],\"Thread\":2489}]","PythonTrace":".setIndex('H00::TRAINING_PROJECT:MD.Addressesen')
+attrFrom=['ADDRESSES.ADDRESSID']
+attrTo=['ADDRESSID']
+parts=[('H00::TRAINING_PROJECT:MD.BusinessPartneren', 0, 4294967295, 0)]
+.addReducer('H00::TRAINING_PROJECT:MD.BusinessPartneren', attrFrom, attrTo, parts, 0, flags=2112, sortAttrs=[])
+.setFlags(0)
+.setMarkValue(-1)
+.setISSInput(4294967295)
+.prepare()
+.setQueryPart(0)
+"}]]></Details>
+											<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop4">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+												<Payload Unit="bytes">1240</Payload>
+												<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop4" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEStep1]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Semijoin1 (first join partner)]]></Summary>
+											<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+											<ObjectName><![CDATA[MD.BusinessPartner.ADDRESSES.ADDRESSID]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.126</Exclusive>
+												<Inclusive Unit="ms">0.126</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1663661529770085,"end":1663661529770211}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.174</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"MD.BusinessPartner.ADDRESSES.ADDRESSID","PerformanceTrace":"{\"details\":[{\"1_timestamp\":\"2022-09-20 08:12:09.770201\",\"2_key\":\"table name\",\"3_value\":\"MD.BusinessPartner\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"},{\"1_timestamp\":\"2022-09-20 08:12:09.770207\",\"2_key\":\"<large detail>\",\"3_value\":\"<executePop(<jeReadValueIds()=0.03><removeTuples(<eraseRows(NumCols=2,)=0.00>in=45,partitions=0,out=45,)=0.00><getApproxCounts()=0.03>)=0.10>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"}]}","PythonTrace":".setNames('H00::TRAINING_PROJECT:MD.BusinessPartner','en',['ADDRESSES.ADDRESSID'], [0])
+.setEdgeId(0)
+.setRuntimeValues(-1, -1, [])
+.setJoinPartType(0)
+.setFlags(48)
+.setLocale('BINARY')
+.setQueryPart(0)
+"}]]></Details>
+										</Relation>
+									</Plan>
+								</InnerPlans>
+							</Relation>
+							<Relation ID="cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pattern2" Status="Finished" Physical="False">
+								<Name><![CDATA[result assembly]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[(4 nodes) build result table with requested columns]]></Summary>
+								<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+								<ObjectName><![CDATA[MD, Temporary Table(s)]]></ObjectName>
+								<ExecutionTime>
+									<Exclusive Unit="ms">0.602</Exclusive>
+									<Inclusive Unit="ms">1.193</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1663661529770483,"end":1663661529770508}]},{"Pop":[{"start":1663661529770525,"end":1663661529770756}]},{"Pop":[{"start":1663661529770847,"end":1663661529770970}]},{"Pop":[{"start":1663661529771055,"end":1663661529771278}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">0.804</UserCPUTime>
+								<Details><![CDATA[{"nodes":"4","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.ADDRESSTYPE","table/column processed 003":"MD.Addresses.BUILDING","table/column processed 004":"MD.Addresses.CITY","table/column processed 005":"MD.Addresses.COUNTRY","table/column processed 006":"MD.Addresses.LATITUDE","table/column processed 007":"MD.Addresses.LONGITUDE","table/column processed 008":"MD.Addresses.POINT","table/column processed 009":"MD.Addresses.POSTALCODE","table/column processed 010":"MD.Addresses.REGION","table/column processed 011":"MD.Addresses.STREET","table/column processed 012":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 013":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 014":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 015":"MD.BusinessPartner.COMPANYNAME","table/column processed 016":"MD.BusinessPartner.EMAILADDRESS","table/column processed 017":"MD.BusinessPartner.FAXNUMBER","table/column processed 018":"MD.BusinessPartner.LEGALFORM","table/column processed 019":"MD.BusinessPartner.PARTNERID","table/column processed 020":"MD.BusinessPartner.PARTNERROLE","table/column processed 021":"MD.BusinessPartner.PHONENUMBER","table/column processed 022":"MD.BusinessPartner.WEBADDRESS","table/column processed 023":"Temporary Table","schema":"TRAINING_PROJECT","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.ADDRESSTYPE","table/column processed 003":"MD.Addresses.BUILDING","table/column processed 004":"MD.Addresses.CITY","table/column processed 005":"MD.Addresses.COUNTRY","table/column processed 006":"MD.Addresses.LATITUDE","table/column processed 007":"MD.Addresses.LONGITUDE","table/column processed 008":"MD.Addresses.POINT","table/column processed 009":"MD.Addresses.POSTALCODE","table/column processed 010":"MD.Addresses.REGION","table/column processed 011":"MD.Addresses.STREET","table/column processed 012":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 013":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 014":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 015":"MD.BusinessPartner.COMPANYNAME","table/column processed 016":"MD.BusinessPartner.EMAILADDRESS","table/column processed 017":"MD.BusinessPartner.FAXNUMBER","table/column processed 018":"MD.BusinessPartner.LEGALFORM","table/column processed 019":"MD.BusinessPartner.PARTNERID","table/column processed 020":"MD.BusinessPartner.PARTNERROLE","table/column processed 021":"MD.BusinessPartner.PHONENUMBER","table/column processed 022":"MD.BusinessPartner.WEBADDRESS","table/column processed 023":"Temporary Table","schema":"TRAINING_PROJECT"}]]></Details>
+								<InnerPlans>
+									<Plan ID="subplan_cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pattern2" PlanType="Column">
+										<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop5" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEUniqueColumn]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Split Plandata]]></Summary>
+											<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+											<ObjectName><![CDATA[Temporary Table]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.025</Exclusive>
+												<Inclusive Unit="ms">0.423</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1663661529770483,"end":1663661529770508}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.045</UserCPUTime>
+											<Details><![CDATA[{"table/column processed":"Temporary Table","table/column processed":"Temporary Table","Temporary Table":"#JE_L:45_4616189618054781763","PerformanceTrace":"{\"details\":[{\"1_timestamp\":\"2022-09-20 08:12:09.770501\",\"2_key\":\"table name\",\"3_value\":\"<none>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"},{\"1_timestamp\":\"2022-09-20 08:12:09.770505\",\"2_key\":\"<executePop()=0.01>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"}]}","PythonTrace":".setLogicalIndex('H00::TRAINING_PROJECT:#JE_L:45_4616189618054781763','en')
+.addRequestedColumn('IX_H00::TRAINING_PROJECT:MD.Addressesen', 1, 0, 1000, 17)
+.addRequestedColumn('IX_H00::TRAINING_PROJECT:MD.BusinessPartneren', 1, 0, 1000, 17)
+.setQueryPart(0)
+"}]]></Details>
+											<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop2">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+												<Payload Unit="bytes">1240</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop8" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEAssembleResults]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Build Result]]></Summary>
+											<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.223</Exclusive>
+												<Inclusive Unit="ms">1.193</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1663661529771055,"end":1663661529771278}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.304</UserCPUTime>
+											<Details><![CDATA[{"PerformanceTrace":"{\"details\":[{\"1_timestamp\":\"2022-09-20 08:12:09.771256\",\"2_key\":\"table name\",\"3_value\":\"#JE_L:45_4616189618054781763\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"},{\"1_timestamp\":\"2022-09-20 08:12:09.771262\",\"2_key\":\"<large detail>\",\"3_value\":\"<executePop(<assembleITabColWise(cols=22,)=0.16>)=0.19>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"}]}","PythonTrace":".setLogicalIndex('TRAINING_PROJECT:#JE_L:45_4616189618054781763','en')
+.setAnchorTable('','en')
+.setQueryPart(0)
+.setResultFromTo(0, 1000)
+.setFlags(128)
+.setReqAttr2View({'H00::TRAINING_PROJECT:MD.Addressesen/ADDRESSID' : 'TRAINING_PROJECT.MD.Addresses.ADDRESSID','H00::TRAINING_PROJECT:MD.Addressesen/ADDRESSTYPE' : 'TRAINING_PROJECT.MD.Addresses.ADDRESSTYPE','H00::TRAINING_PROJECT:MD.Addressesen/BUILDING' : 'TRAINING_PROJECT.MD.Addresses.BUILDING','H00::TRAINING_PROJECT:MD.Addressesen/CITY' : 'TRAINING_PROJECT.MD.Addresses.CITY','H00::TRAINING_PROJECT:MD.Addressesen/COUNTRY' : 'TRAINING_PROJECT.MD.Addresses.COUNTRY','H00::TRAINING_PROJECT:MD.Addressesen/LATITUDE' : 'TRAINING_PROJECT.MD.Addresses.LATITUDE','H00::TRAINING_PROJECT:MD.Addressesen/LONGITUDE' : 'TRAINING_PROJECT.MD.Addresses.LONGITUDE','H00::TRAINING_PROJECT:MD.Addressesen/POINT' : 'TRAINING_PROJECT.MD.Addresses.POINT','H00::TRAINING_PROJECT:MD.Addressesen/POSTALCODE' : 'TRAINING_PROJECT.MD.Addresses.POSTALCODE','H00::TRAINING_PROJECT:MD.Addressesen/REGION' : 'TRAINING_PROJECT.MD.Addresses.REGION','H00::TRAINING_PROJECT:MD.Addressesen/STREET' : 'TRAINING_PROJECT.MD.Addresses.STREET','H00::TRAINING_PROJECT:MD.Addressesen/VALIDITY.ENDDATE' : 'TRAINING_PROJECT.MD.Addresses.VALIDITY.ENDDATE','H00::TRAINING_PROJECT:MD.Addressesen/VALIDITY.STARTDATE' : 'TRAINING_PROJECT.MD.Addresses.VALIDITY.STARTDATE','H00::TRAINING_PROJECT:MD.BusinessPartneren/ADDRESSES.ADDRESSID' : 'TRAINING_PROJECT.MD.BusinessPartner.ADDRESSES.ADDRESSID','H00::TRAINING_PROJECT:MD.BusinessPartneren/COMPANYNAME' : 'TRAINING_PROJECT.MD.BusinessPartner.COMPANYNAME','H00::TRAINING_PROJECT:MD.BusinessPartneren/EMAILADDRESS' : 'TRAINING_PROJECT.MD.BusinessPartner.EMAILADDRESS','H00::TRAINING_PROJECT:MD.BusinessPartneren/FAXNUMBER' : 'TRAINING_PROJECT.MD.BusinessPartner.FAXNUMBER','H00::TRAINING_PROJECT:MD.BusinessPartneren/LEGALFORM' : 'TRAINING_PROJECT.MD.BusinessPartner.LEGALFORM','H00::TRAINING_PROJECT:MD.BusinessPartneren/PARTNERID' : 'TRAINING_PROJECT.MD.BusinessPartner.PARTNERID','H00::TRAINING_PROJECT:MD.BusinessPartneren/PARTNERROLE' : 'TRAINING_PROJECT.MD.BusinessPartner.PARTNERROLE','H00::TRAINING_PROJECT:MD.BusinessPartneren/PHONENUMBER' : 'TRAINING_PROJECT.MD.BusinessPartner.PHONENUMBER','H00::TRAINING_PROJECT:MD.BusinessPartneren/WEBADDRESS' : 'TRAINING_PROJECT.MD.BusinessPartner.WEBADDRESS'})
+.setLocale('BINARY')
+.setResultColOrder([9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 0, 1, 2, 3, 4, 5, 6, 7, 8])
+"}]]></Details>
+											<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop2">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+												<Payload Unit="bytes">1240</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+											<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop6">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+												<Payload Unit="bytes">22388</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) ADDRESSID (type) int","data container member":"(column) CITY (type) string","data container member":"(column) POSTALCODE (type) string","data container member":"(column) STREET (type) string","data container member":"(column) BUILDING (type) string","data container member":"(column) COUNTRY (type) string","data container member":"(column) REGION (type) string","data container member":"(column) ADDRESSTYPE (type) string","data container member":"(column) VALIDITY.STARTDATE (type) daydate","data container member":"(column) VALIDITY.ENDDATE (type) daydate","data container member":"and 3 more ..." }]]></Details>
+											</Child>
+											<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop7">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+												<Payload Unit="bytes">21064</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) PARTNERID (type) int","data container member":"(column) PARTNERROLE (type) string","data container member":"(column) EMAILADDRESS (type) string","data container member":"(column) PHONENUMBER (type) string","data container member":"(column) FAXNUMBER (type) string","data container member":"(column) WEBADDRESS (type) string","data container member":"(column) ADDRESSES.ADDRESSID (type) int","data container member":"(column) COMPANYNAME (type) string","data container member":"(column) LEGALFORM (type) string" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pattern2_abstr1" Status="Finished" Physical="False">
+											<Name><![CDATA[JERequestedAttributes]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[2 nodes with same name]]></Summary>
+											<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+											<ObjectName><![CDATA[MD]]></ObjectName>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.354</Exclusive>
+												<Inclusive Unit="ms">0.885</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1663661529770525,"end":1663661529770756}]},{"Pop":[{"start":1663661529770847,"end":1663661529770970}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.455</UserCPUTime>
+											<Details><![CDATA[{"nodes":"2","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.ADDRESSTYPE","table/column processed 003":"MD.Addresses.BUILDING","table/column processed 004":"MD.Addresses.CITY","table/column processed 005":"MD.Addresses.COUNTRY","table/column processed 006":"MD.Addresses.LATITUDE","table/column processed 007":"MD.Addresses.LONGITUDE","table/column processed 008":"MD.Addresses.POINT","table/column processed 009":"MD.Addresses.POSTALCODE","table/column processed 010":"MD.Addresses.REGION","table/column processed 011":"MD.Addresses.STREET","table/column processed 012":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 013":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 014":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 015":"MD.BusinessPartner.COMPANYNAME","table/column processed 016":"MD.BusinessPartner.EMAILADDRESS","table/column processed 017":"MD.BusinessPartner.FAXNUMBER","table/column processed 018":"MD.BusinessPartner.LEGALFORM","table/column processed 019":"MD.BusinessPartner.PARTNERID","table/column processed 020":"MD.BusinessPartner.PARTNERROLE","table/column processed 021":"MD.BusinessPartner.PHONENUMBER","table/column processed 022":"MD.BusinessPartner.WEBADDRESS","schema":"TRAINING_PROJECT","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.ADDRESSTYPE","table/column processed 003":"MD.Addresses.BUILDING","table/column processed 004":"MD.Addresses.CITY","table/column processed 005":"MD.Addresses.COUNTRY","table/column processed 006":"MD.Addresses.LATITUDE","table/column processed 007":"MD.Addresses.LONGITUDE","table/column processed 008":"MD.Addresses.POINT","table/column processed 009":"MD.Addresses.POSTALCODE","table/column processed 010":"MD.Addresses.REGION","table/column processed 011":"MD.Addresses.STREET","table/column processed 012":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 013":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 014":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 015":"MD.BusinessPartner.COMPANYNAME","table/column processed 016":"MD.BusinessPartner.EMAILADDRESS","table/column processed 017":"MD.BusinessPartner.FAXNUMBER","table/column processed 018":"MD.BusinessPartner.LEGALFORM","table/column processed 019":"MD.BusinessPartner.PARTNERID","table/column processed 020":"MD.BusinessPartner.PARTNERROLE","table/column processed 021":"MD.BusinessPartner.PHONENUMBER","table/column processed 022":"MD.BusinessPartner.WEBADDRESS","schema":"TRAINING_PROJECT","table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.ADDRESSTYPE","table/column processed 003":"MD.Addresses.BUILDING","table/column processed 004":"MD.Addresses.CITY","table/column processed 005":"MD.Addresses.COUNTRY","table/column processed 006":"MD.Addresses.LATITUDE","table/column processed 007":"MD.Addresses.LONGITUDE","table/column processed 008":"MD.Addresses.POINT","table/column processed 009":"MD.Addresses.POSTALCODE","table/column processed 010":"MD.Addresses.REGION","table/column processed 011":"MD.Addresses.STREET","table/column processed 012":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 013":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 014":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 015":"MD.BusinessPartner.COMPANYNAME","table/column processed 016":"MD.BusinessPartner.EMAILADDRESS","table/column processed 017":"MD.BusinessPartner.FAXNUMBER","table/column processed 018":"MD.BusinessPartner.LEGALFORM","table/column processed 019":"MD.BusinessPartner.PARTNERID","table/column processed 020":"MD.BusinessPartner.PARTNERROLE","table/column processed 021":"MD.BusinessPartner.PHONENUMBER","table/column processed 022":"MD.BusinessPartner.WEBADDRESS","schema":"TRAINING_PROJECT"}]]></Details>
+											<InnerPlans>
+												<Plan ID="subplan_cs_plan24_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pattern2_abstr1" PlanType="Column">
+													<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop6" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JERequestedAttributes]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Projection of columns ADDRESSID, CITY, POSTALCODE, STREET, BUILDING, COUNTRY, REGION, ADDRESSTYPE, VALIDITY.STARTDATE, VALIDITY.ENDDATE, LATITUDE, LONGITUDE, POINT]]></Summary>
+														<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+														<ObjectName><![CDATA[MD]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.231</Exclusive>
+															<Inclusive Unit="ms">0.671</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1663661529770525,"end":1663661529770756}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.247</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"MD.Addresses.ADDRESSID","table/column processed 002":"MD.Addresses.CITY","table/column processed 003":"MD.Addresses.POSTALCODE","table/column processed 004":"MD.Addresses.STREET","table/column processed 005":"MD.Addresses.BUILDING","table/column processed 006":"MD.Addresses.COUNTRY","table/column processed 007":"MD.Addresses.REGION","table/column processed 008":"MD.Addresses.ADDRESSTYPE","table/column processed 009":"MD.Addresses.VALIDITY.STARTDATE","table/column processed 010":"MD.Addresses.VALIDITY.ENDDATE","table/column processed 011":"MD.Addresses.LATITUDE","table/column processed 012":"MD.Addresses.LONGITUDE","table/column processed 013":"MD.Addresses.POINT","PerformanceTrace":"{\"details\":[{\"1_timestamp\":\"2022-09-20 08:12:09.770746\",\"2_key\":\"table name\",\"3_value\":\"MD.Addresses\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"},{\"1_timestamp\":\"2022-09-20 08:12:09.770751\",\"2_key\":\"<large detail>\",\"3_value\":\"<executePop(<valuearray(attrs=13,rows=45,)=0.18><reorder()=0.00>)=0.21>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"}]}","FunctionProfiler":"[{\"Start Time\":\"2022-09-20 08:12:09.770\",\"Steps\":[{\"Name\":\"GeometryAttribute::getValues\",\"Total\":0.023}],\"Thread\":2489}]","PythonTrace":".setIndex('H00::TRAINING_PROJECT:MD.Addresses','en')
+.addAttribute('ADDRESSID', 1)
+.addAttribute('CITY', 1)
+.addAttribute('POSTALCODE', 1)
+.addAttribute('STREET', 1)
+.addAttribute('BUILDING', 1)
+.addAttribute('COUNTRY', 1)
+.addAttribute('REGION', 1)
+.addAttribute('ADDRESSTYPE', 1)
+.addAttribute('VALIDITY.STARTDATE', 1)
+.addAttribute('VALIDITY.ENDDATE', 1)
+.addAttribute('LATITUDE', 1)
+.addAttribute('LONGITUDE', 1)
+.addAttribute('POINT', 1)
+.setFlags(132)
+.setLocale('BINARY')
+.setQueryPart(0)
+"}]]></Details>
+														<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop5">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+															<Payload Unit="bytes">1240</Payload>
+															<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop7" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JERequestedAttributes]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Projection of columns PARTNERID, PARTNERROLE, EMAILADDRESS, PHONENUMBER, FAXNUMBER, WEBADDRESS, ADDRESSES.ADDRESSID, COMPANYNAME, LEGALFORM]]></Summary>
+														<Schema><![CDATA[TRAINING_PROJECT]]></Schema>
+														<ObjectName><![CDATA[MD]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[13715b57-04fa-4ff5-a396-286f890c3b50:30040]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.123</Exclusive>
+															<Inclusive Unit="ms">0.885</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1663661529770847,"end":1663661529770970}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.208</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"MD.BusinessPartner.PARTNERID","table/column processed 002":"MD.BusinessPartner.PARTNERROLE","table/column processed 003":"MD.BusinessPartner.EMAILADDRESS","table/column processed 004":"MD.BusinessPartner.PHONENUMBER","table/column processed 005":"MD.BusinessPartner.FAXNUMBER","table/column processed 006":"MD.BusinessPartner.WEBADDRESS","table/column processed 007":"MD.BusinessPartner.ADDRESSES.ADDRESSID","table/column processed 008":"MD.BusinessPartner.COMPANYNAME","table/column processed 009":"MD.BusinessPartner.LEGALFORM","PerformanceTrace":"{\"details\":[{\"1_timestamp\":\"2022-09-20 08:12:09.770959\",\"2_key\":\"table name\",\"3_value\":\"MD.BusinessPartner\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"},{\"1_timestamp\":\"2022-09-20 08:12:09.770964\",\"2_key\":\"<large detail>\",\"3_value\":\"<executePop(<valuearray(attrs=9,rows=45,)=0.08><reorder()=0.00>)=0.10>\",\"9_location\":\"13715b57-04fa-4ff5-a396-286f890c3b50:30040\"}]}","PythonTrace":".setIndex('H00::TRAINING_PROJECT:MD.BusinessPartner','en')
+.addAttribute('PARTNERID', 1)
+.addAttribute('PARTNERROLE', 1)
+.addAttribute('EMAILADDRESS', 1)
+.addAttribute('PHONENUMBER', 1)
+.addAttribute('FAXNUMBER', 1)
+.addAttribute('WEBADDRESS', 1)
+.addAttribute('ADDRESSES.ADDRESSID', 1)
+.addAttribute('COMPANYNAME', 1)
+.addAttribute('LEGALFORM', 1)
+.setFlags(132)
+.setLocale('BINARY')
+.setQueryPart(0)
+"}]]></Details>
+														<Child ID="X2_plan2833_13715b57-04fa-4ff5-a396-286f890c3b50_30040_pop5">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>45</ExecutedOutputCardinality>
+															<Payload Unit="bytes">1240</Payload>
+															<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+														</Child>
+													</Relation>
+												</Plan>
+											</InnerPlans>
+										</Relation>
+									</Plan>
+								</InnerPlans>
+							</Relation>
+						</Plan>
+					</InnerPlans>
+				</Relation>
+			</Plan>
+		</InnerPlans>
+	</Relation>
+</Plan>
